@@ -18,9 +18,6 @@
 
 BOARD_VENDOR := oneplus
 
-# Use SaberMod Toolchains
-SABERMOD_TOOLCHAIN_ENABLED := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
 TARGET_NO_BOOTLOADER := true
