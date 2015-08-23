@@ -31,7 +31,7 @@ on init
 
 on charger
     #setprop persist.sys.usb.config mass_storage
-    #mount_all fstab.qcom
+    #mount_all fstab.tocino
     #Add by yangrujin@bsp 2015/6/26, healthd_mode_charger.c can write it
     #2015/6/30 revert to orig, set in this rc, for now the issue is fixed
     #chmod 755 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor

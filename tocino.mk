@@ -30,7 +30,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
+    fstab.tocino \
     init.qcom.rc \
     init.qcom.ril.sh \
     init.qcom.usb.rc \
