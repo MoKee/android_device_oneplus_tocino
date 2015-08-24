@@ -59,7 +59,7 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
 
 on fs
-    mount_all /fstab.tocino
+    mount_all /fstab.qcom
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB

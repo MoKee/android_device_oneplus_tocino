@@ -152,7 +152,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/tocino/rootdir/etc/fstab.tocino
+TARGET_RECOVERY_FSTAB := device/oneplus/tocino/rootdir/etc/fstab.qcom
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,tocino
 
