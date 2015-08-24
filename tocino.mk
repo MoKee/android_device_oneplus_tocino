@@ -202,6 +202,3 @@ $(call inherit-product-if-exists, vendor/oneplus/tocino/tocino-vendor.mk)
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 endif
-
-# Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)

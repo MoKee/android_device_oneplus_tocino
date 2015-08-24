@@ -13,9 +13,6 @@
 # limitations under the License.
 #
 
-# Inherit from Oppo common
--include device/oppo/common/BoardConfigCommon.mk
-
 BOARD_VENDOR := oneplus
 
 # Bootloader
