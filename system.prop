@@ -64,3 +64,9 @@ persist.sys.usb.config=mtp,adb
 
 # Wifi
 wifi.interface=wlan0
+
+# Bluetooth
+bluetooth.hfp.client=1
+qcom.bluetooth.soc=rome
+ro.bluetooth.a4wp=true
+ro.bluetooth.wipower=true
