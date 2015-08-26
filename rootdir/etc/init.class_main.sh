@@ -53,5 +53,4 @@ case "$datamode" in
     *)
         start netmgrd
         ;;
-    esac
 esac
