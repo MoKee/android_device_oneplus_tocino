@@ -157,6 +157,9 @@ TARGET_RECOVERY_FSTAB := device/oneplus/tocino/rootdir/etc/fstab.qcom
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,tocino
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
