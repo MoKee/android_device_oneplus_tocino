@@ -34,6 +34,7 @@ TARGET_VENDOR := oneplus
 TARGET_VENDOR_PRODUCT_NAME := tocino
 TARGET_VENDOR_DEVICE_NAME := A2001
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=A2001 PRODUCT_NAME=tocino
+
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
