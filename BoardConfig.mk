@@ -97,6 +97,10 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 # Font
 EXTENDED_FONT_FOOTPRINT := true
 
+# GPS
+TARGET_GPS_HAL_PATH := device/oneplus/tocino/gps
+TARGET_NO_RPC := true
+
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_ION := true
