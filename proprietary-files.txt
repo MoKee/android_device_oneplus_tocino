@@ -442,6 +442,9 @@ vendor/lib/libulp2.so
 vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
+-framework/com.quicinc.cne.jar
+-framework/com.quicinc.wbc.jar
+-framework/com.quicinc.wbcservice.jar
 
 # Network
 bin/lowi-server
@@ -451,7 +454,7 @@ bin/xtwifi-client
 vendor/bin/slim_ap_daemon
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
