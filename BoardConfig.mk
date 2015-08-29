@@ -162,6 +162,9 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus2,tocino
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
