@@ -172,5 +172,8 @@ BOARD_USES_QC_TIME_SERVICES := true
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
+# CM Hardware
+BOARD_HARDWARE_CLASS := device/oneplus/oneplus2/cmhw
+
 # inherit from the proprietary version
 -include vendor/oneplus/tocino/BoardConfigVendor.mk
