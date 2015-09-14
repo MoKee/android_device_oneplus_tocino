@@ -167,8 +167,8 @@ include device/qcom/sepolicy/sepolicy.mk
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS := device/oneplus/oneplus2/cmhw
+# MK Hardware
+BOARD_HARDWARE_CLASS := device/oneplus/tocino/mkhw
 
 # inherit from the proprietary version
 -include vendor/oneplus/tocino/BoardConfigVendor.mk
