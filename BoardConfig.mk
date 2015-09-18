@@ -15,7 +15,7 @@
 
 BOARD_VENDOR := oneplus
 
-PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
+PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl, $(PRODUCT_COPY_FILES))
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994

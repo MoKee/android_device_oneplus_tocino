@@ -38,6 +38,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=A2001 PRODUCT_NAME=tocino
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=oneplus/tocino/A2001:5.1.1/LMY47V/1436933040:user/release-keys \
-    PRIVATE_BUILD_DESC="tocino-user 5.1.1 LMY47V 44 dev-keys"
+    BUILD_FINGERPRINT=OnePlus/tocino/A2001:5.1.1/LMY47V/1436933040:user/release-keys \
+    PRIVATE_BUILD_DESC="tocino-user 5.1.1 LMY47V 28 dev-keys"
 endif
