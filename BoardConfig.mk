@@ -163,7 +163,10 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_USES_QC_TIME_SERVICES := true
 
 # MK Hardware
-BOARD_HARDWARE_CLASS := device/oneplus/tocino/mkhw
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    device/oneplus/tocino/mkhw \
+    hardware/mokee/mkhw
 
 # inherit from the proprietary version
 -include vendor/oneplus/tocino/BoardConfigVendor.mk
