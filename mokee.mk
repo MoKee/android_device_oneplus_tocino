@@ -25,6 +25,6 @@ $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 PRODUCT_NAME := mk_tocino
 PRODUCT_DEVICE := tocino
 PRODUCT_MANUFACTURER := OnePlus
-PRODUCT_MODEL := ONE A2001
+PRODUCT_MODEL := A2001
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
