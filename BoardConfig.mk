@@ -159,7 +159,7 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2,tocino
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/oneplus/oneplus2/sepolicy
+BOARD_SEPOLICY_DIRS += device/oneplus/tocino/sepolicy
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
