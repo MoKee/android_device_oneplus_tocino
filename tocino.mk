@@ -263,8 +263,7 @@ PRODUCT_PACKAGES += \
     hostapd.deny
 
 PRODUCT_PACKAGES += \
-    wcnss_service \
-    libwcnss_qmi
+    wcnss_service
 
 # Misc dependency packages
 PRODUCT_PACKAGES += \
