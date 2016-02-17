@@ -23,9 +23,9 @@
 # Inherit from oppo-common
 -include device/oppo/common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
+TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2,tocino
 
-PLATFORM_PATH := device/oneplus/oneplus2
+PLATFORM_PATH := device/oneplus/tocino
 
 BOARD_VENDOR := oneplus
 
@@ -68,7 +68,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_MKBOOTIMG_ARGS := --tags_offset 0x00000100
 TARGET_CUSTOM_DTBTOOL := dtbToolOP2
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
-TARGET_KERNEL_CONFIG := cm_oneplus2_defconfig
+TARGET_KERNEL_CONFIG := mokee_tocino_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
@@ -129,7 +129,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_LIBINIT_DEFINES_FILE := $(PLATFORM_PATH)/init/init_oneplus2.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(PLATFORM_PATH)/init/init_tocino.cpp
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -187,9 +187,9 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+# MK Hardware
+BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/mkhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # inherit from the proprietary version
--include vendor/oneplus/oneplus2/BoardConfigVendor.mk
+-include vendor/oneplus/tocino/BoardConfigVendor.mk
