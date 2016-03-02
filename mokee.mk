@@ -16,6 +16,3 @@ $(call inherit-product, device/oneplus/tocino/full_tocino.mk)
 
 # Inherit some common MK stuff.
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
-
-# Inherit tocino-specific vendor tree
-$(call inherit-product-if-exists, vendor/oneplus/tocino/tocino-vendor.mk)
