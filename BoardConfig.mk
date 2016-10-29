@@ -21,14 +21,12 @@
 # definition file).
 #
 
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
+# Inherit from oneplus-common
+-include device/oneplus/common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2,tocino
 
 PLATFORM_PATH := device/oneplus/tocino
-
-BOARD_VENDOR := oneplus
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
