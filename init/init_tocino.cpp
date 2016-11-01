@@ -39,8 +39,8 @@ void init_variant_properties() {
     char rf_version[PROP_VALUE_MAX];
     int rc;
 
-    rc = property_get("ro.cm.device", device);
-    if (!rc || strncmp(device, "oneplus2", 8))
+    rc = property_get("ro.mk.device", device);
+    if (!rc || strncmp(device, "tocino", 6))
         return;
 
     property_get("ro.boot.rf_v1", rf_version);
