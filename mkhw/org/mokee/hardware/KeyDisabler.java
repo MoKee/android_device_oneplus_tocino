@@ -17,9 +17,7 @@
 
 package org.mokee.hardware;
 
-import java.io.File;
-
-import org.mokee.hardware.util.FileUtils;
+import org.mokee.internal.util.FileUtils;
 
 /*
  * Disable capacitive keys
@@ -35,11 +33,11 @@ public class KeyDisabler {
     private static String CONTROL_PATH = "/proc/s1302/virtual_key";
 
     public static boolean isSupported() {
-        return new File(CONTROL_PATH).exists();
+        return FileUtils.isFileWritable(CONTROL_PATH);
     }
 
     public static boolean isActive() {
-        return (FileUtils.readOneLine(CONTROL_PATH).contains("enabled"));
+        return FileUtils.readOneLine(CONTROL_PATH).contains("enabled");
     }
 
     public static boolean setActive(boolean state) {

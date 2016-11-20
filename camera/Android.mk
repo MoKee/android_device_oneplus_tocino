@@ -14,32 +14,41 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(TARGET_SIMULATOR),true)
-
-# HAL module implemenation, not prelinked, and stored in
-# hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
 
-# LOCAL_MODULE := sensors.herring
 LOCAL_MODULE := sensors.hal.tof
 
-LOCAL_C_INCLUDES:= \
-        kernel/include/linux/input/ \
+LOCAL_C_INCLUDES := kernel/include/linux/input
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS := -DLOG_TAG=\"Sensors\"
-LOCAL_SRC_FILES :=                        \
-                sensors.cpp               \
-                SensorBase.cpp            \
-                ProximitySensor.cpp       \
-                InputEventReader.cpp
+LOCAL_SRC_FILES := \
+    sensors.cpp \
+    SensorBase.cpp \
+    ProximitySensor.cpp \
+    InputEventReader.cpp
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif # !TARGET_SIMULATOR
+include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES := \
+    system/media/camera/include
+
+LOCAL_SRC_FILES := \
+    CameraWrapper.cpp
+
+LOCAL_SHARED_LIBRARIES := \
+    libhardware liblog libgui libutils
+
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)

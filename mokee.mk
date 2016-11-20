@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,32 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/oneplus/tocino/full_tocino.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from tocino device
+$(call inherit-product, device/oneplus/tocino/device.mk)
 
 # Inherit some common MK stuff.
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
+
+PRODUCT_NAME := mk_oneplus2
+PRODUCT_DEVICE := tocino
+PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_MODEL := ONE A2001
+PRODUCT_BRAND := OnePlus
+
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+TARGET_VENDOR_PRODUCT_NAME := tocino
+TARGET_VENDOR_DEVICE_NAME := tocino
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=tocino PRODUCT_NAME=tocino
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840920:user/release-keys \
+    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.1 MMB29M 20 dev-keys"
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
+
+TARGET_VENDOR := oneplus

@@ -1,9 +1,80 @@
 # system.prop for OnePlus2
 
-ro.build.product=tocino
-ro.product.device=tocino
-ro.build.description=OnePlus2-user 6.0.1 MMB29M 31 dev-keys
-ro.build.fingerprint=OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840820:user/release-keys
+# Audio
+audio.offload.video=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+ro.qc.sdk.audio.fluencetype=fluence
+ro.qc.sdk.audio.ssr=false
+persist.audio.ssr.3mic=false
+media.aac_51_output_enabled=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+use.voice.path.for.pcm.voip=true
+audio.offload.multiple.enabled=true
+audio.offload.gapless.enabled=true
+mm.enable.smoothstreaming=true
+audio.offload.buffer.size.kb=32
+tunnel.audio.encode=false
+
+# Bluetooth
+bluetooth.hfp.client=1
+qcom.bluetooth.soc=rome
+ro.bluetooth.a4wp=true
+ro.bluetooth.wipower=true
+
+# Camera
+persist.camera.HAL3.enabled=0
+persist.camera.cpp.duplication=false
+vidc.debug.perf.mode=2
+vidc.enc.dcvs.extra-buff-count=2
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
+# CEC
+ro.hdmi.device_type=4
+persist.sys.hdmi.addr.playback=4
+ro.hdmi.enable=true
+persist.speaker.prot.enable=false
+persist.spkr.cal.duration=0
+qcom.hw.aac.encoder=true
+
+# CNE
+persist.cne.feature=1
+
+# Data Power Manager (DPM)
+persist.dpm.feature=7
+persist.env.fastdorm.enabled=true
+persist.sys.dpmd.nsrm=3
+
+# Debug logging for DPM & CNE can be enabled via:
+# Push libdpmlog.so to system/vendor/lib|64
+#persist.dpm.nsrm.bkg.evt=3955
+#persist.dpm.loglevel=7825
+
+# Dex2oat limits
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-threads=2
+dalvik.vm.image-dex2oat-threads=4
+
+# GPS
+persist.gps.qc_nlp_in_use=1
+persist.loc.nlp_name=com.qualcomm.location
+ro.gps.agps_provider=1
+ro.pip.gated=0
+
+# Graphics
+persist.hwc.mdpcomp.enable=true
+dalvik.vm.heapsize=36m
+ro.qualcomm.cabl=0
+ro.sf.lcd_density=480
+ro.opengles.version=196610
+
+# QC vendor extension
+ro.vendor.extension_library=libqti-perfd-client.so
+ro.frp.pst=/dev/block/bootdevice/by-name/config
+drm.service.enabled=true
 
 # RIL
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
@@ -28,75 +99,16 @@ persist.radio.start_ota_daemon=1
 persist.radio.rat_on=combine
 persist.data.qmi.adb_logmask=0
 
-# Audio
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-ro.qc.sdk.audio.fluencetype=fluence
-ro.qc.sdk.audio.ssr=false
-persist.audio.ssr.3mic=false
-media.aac_51_output_enabled=true
-audio.offload.pcm.16bit.enable=false
-audio.offload.pcm.24bit.enable=true
-use.voice.path.for.pcm.voip=true
-audio.offload.multiple.enabled=true
-audio.offload.gapless.enabled=true
-mm.enable.smoothstreaming=true
-audio.offload.buffer.size.kb=1024
-
-# Bluetooth
-bluetooth.hfp.client=1
-qcom.bluetooth.soc=rome
-ro.bluetooth.a4wp=true
-ro.bluetooth.wipower=true
-
-# Camera
-camera.disable_zsl_mode=1
-persist.camera.cpp.duplication=false
-
-# CEC
-ro.hdmi.device_type=4
-persist.sys.hdmi.addr.playback=4
-ro.hdmi.enable=true
-persist.speaker.prot.enable=false
-persist.spkr.cal.duration=0
-qcom.hw.aac.encoder=true
-
-# CNE
-persist.cne.feature=1
-
-# Data Power Manager (DPM)
-persist.dpm.feature=7
-persist.env.fastdorm.enabled=true
-persist.sys.dpmd.nsrm=3
-
-# Debug logging for DPM & CNE can be enabled via:
-# Push libdpmlog.so to system/vendor/lib|64
-#persist.dpm.nsrm.bkg.evt=3955
-#persist.dpm.loglevel=7825
-
-# GPS
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.location
-ro.gps.agps_provider=1
-ro.pip.gated=0
-
-# Graphics
-persist.hwc.mdpcomp.enable=true
-dalvik.vm.heapsize=36m
-ro.qualcomm.cabl=0
-ro.sf.lcd_density=480
-ro.opengles.version=196609
-
-# QC vendor extension
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.frp.pst=/dev/block/bootdevice/by-name/config
-drm.service.enabled=true
-
 # Sensors
 ro.qc.sdk.sensors.gestures=true
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
 
+# Storage
+ro.sys.sdcardfs=true
+
 # Time services
 persist.timed.enable=true
+
+# Wifi
+persist.data.iwlan.enable=true
