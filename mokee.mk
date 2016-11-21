@@ -22,7 +22,7 @@ $(call inherit-product, device/oneplus/tocino/device.mk)
 # Inherit some common MK stuff.
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-PRODUCT_NAME := mk_oneplus2
+PRODUCT_NAME := mk_tocino
 PRODUCT_DEVICE := tocino
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := ONE A2001
