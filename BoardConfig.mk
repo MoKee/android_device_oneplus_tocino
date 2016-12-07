@@ -27,6 +27,8 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2,tocino
 
 PLATFORM_PATH := device/oneplus/tocino
 
+BOARD_VENDOR := oneplus
+
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
@@ -213,9 +215,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # MK Hardware
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/mkhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
-# inherit from OnePlus common
--include device/oneplus/common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/oneplus/tocino/BoardConfigVendor.mk
