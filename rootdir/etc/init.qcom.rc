@@ -72,6 +72,8 @@ on init
     chmod 0660 /sys/bus/spi/devices/spi12.0/clk_enable
     chown system system /sys/bus/spi/devices/spi12.0/clk_enable
 
+    chown system system /proc/fingerprint/disable
+
     # Laser AF
     chown system system /dev/stmvl6180_ranging
     symlink /dev/input/event2 /dev/stm_sensor

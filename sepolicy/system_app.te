@@ -1,5 +1,7 @@
 allow system_app proc_touchpanel:dir search;
 allow system_app proc_touchpanel:file { write getattr open read };
+allow system_app proc_fingerprint:dir search;
+allow system_app proc_fingerprint:file { write getattr open };
 allow system_app qmuxd_socket:dir search;
 allow system_app cne_service:service_manager add;
 allow system_app dpmservice:service_manager add;
