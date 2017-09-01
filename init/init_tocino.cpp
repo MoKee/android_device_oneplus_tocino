@@ -36,10 +36,11 @@
 
 void init_variant_properties() {
 
-    std::string device = property_get("ro.mk.device");
+    std::string platform;
     std::string rf_version;
 
-    if (device != "tocino")
+    platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
     rf_version = property_get("ro.boot.rf_v1");
